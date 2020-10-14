@@ -2,7 +2,7 @@
 from game import data
 print(data)
 
-
+# husk pip3 install yaml
 import yaml
 
 
