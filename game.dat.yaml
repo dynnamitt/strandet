@@ -1,0 +1,69 @@
+title: Strandet i ødeland
+version: 1.0
+scenes:
+  - number: 1
+    text: >
+      Du har nådd et hjørne.
+      Det ser veldig kaldt og øde ut her
+    more-text: >
+      Du ser noen sauer og snø på bakken
+      Hvis du ikke kommer deg i sikkerhet fryser du ihjel
+    events:
+       - countdown: 20 sec
+         result: "@death"
+         descr: "Du frøys ihjel!"
+    walk:
+      south: 
+        - "@4"
+        - Du kan se mere snø der
+      north: 
+        - Du kan ikke gå dit, fjellet er for bratt!
+        - Et langt høyt fjell strekker seg ut
+      east: 
+        - "@2"
+        - Et nytt landskap venter
+      west: 
+        - Du kan ikke klatre på en isvegg!
+        - En stor isvegg  
+
+  # -- slutt scene 1
+  - number: 2
+    text: >
+      Pass deg! Du er sammen med 2 ulver
+      i et fjellpass.
+    more-text: |-
+      Fjellvegger i nord og syd. 
+      Ulvene knurrer høyt og går imot deg
+    events:
+      - countdown: 5 sec
+        result: Du må løpe unna nå!
+      - countdown: 8 sec
+        result: "@death"
+        descr: "du er nå rå ulve mat!"
+    walk:
+      south: 
+        - "Du kan ikke klatre på dette bratte fjellet"
+        - "Isfjellet i nord"
+      north: 
+        - "Du kan ikke gå dit, fjellet er for bratt"
+        - "Gråfjeller i sør ser veldig bratt ut på denne siden"
+      east: 
+        - "@3"
+        - Vått område med skog
+      west: 
+        - "@1"
+        - Du ser et område med snø
+  # -- slutt scene 2
+
+  - number: 3
+    text: >
+      kommer
+    walk:
+  # -- slutt scene 3
+
+  - number: 4
+    text: >
+      kommer
+    walk:
+  # -- slutt scene 4
+  
